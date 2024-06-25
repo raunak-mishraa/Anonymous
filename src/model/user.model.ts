@@ -1,22 +1,22 @@
 import mongoose,{Schema, Document} from "mongoose";
 
 export interface Message extends Document {
-    content: string,
-    createdAt: Date,
-}
-
-const MessageSchema: Schema<Message> = new Schema({
+    content: string;
+    createdAt: Date;
+  }
+  
+  const MessageSchema: Schema<Message> = new mongoose.Schema({
     content: {
-        type: String, 
-        required: true
+      type: String,
+      required: true,
     },
     createdAt: {
-        type: Date, 
-        required: true,
-        default: Date.now
+      type: Date,
+      required: true,
+      default: Date.now,
     },
-});
-
+  });
+  
 export interface User extends Document {
     username: string,
     email: string,
@@ -33,7 +33,8 @@ const UserSchema: Schema<User> = new Schema({
         type: String, 
         required: [true, 'Username is required'],
         unique: true,
-        trim: true
+        trim: true,
+        lowercase: true,
     },
     email: {
         type: String, 

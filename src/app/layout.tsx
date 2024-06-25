@@ -27,3 +27,4 @@ export default async function RootLayout({ children }: RootLayoutProps) {
     </html>
   );
 }
+
