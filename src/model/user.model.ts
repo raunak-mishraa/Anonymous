@@ -16,7 +16,11 @@ export interface Message extends Document {
       default: Date.now,
     },
   });
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 3c95b7556bf286b92b2b2d0550ccbbe767d927d8
 export interface User extends Document {
     username: string,
     email: string,
