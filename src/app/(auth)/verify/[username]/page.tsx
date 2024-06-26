@@ -43,7 +43,9 @@ export default function VerifyAccount() {
       const axiosError = error as AxiosError<ApiResponse>;
       toast({
         title: 'Verification Failed',
-        description:axiosError.response?.data.message,
+        description:
+          axiosError.response?.data.message ??
+          'An error occurred. Please try again.',
         variant: 'destructive',
       });
     }
