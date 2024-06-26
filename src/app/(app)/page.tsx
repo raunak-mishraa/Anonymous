@@ -3,11 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-<<<<<<< HEAD
 import { Mail } from 'lucide-react'; 
-=======
-import { Mail } from 'lucide-react'; // Assuming you have an icon for messages
->>>>>>> 3c95b7556bf286b92b2b2d0550ccbbe767d927d8
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Autoplay from 'embla-carousel-autoplay';
 import messages from '@/messages.json';
@@ -23,28 +19,18 @@ import {
 export default function Home() {
   return (
     <>
-<<<<<<< HEAD
       {/* Main content */}
-=======
->>>>>>> 3c95b7556bf286b92b2b2d0550ccbbe767d927d8
       <main className="flex-grow flex flex-col items-center justify-center px-4 md:px-24 py-12 bg-gray-800 text-white">
         <section className="text-center mb-8 md:mb-12">
           <h1 className="text-3xl md:text-5xl font-bold">
             Dive into the World of Anonymous Feedback
           </h1>
           <p className="mt-3 md:mt-4 text-base md:text-lg">
-<<<<<<< HEAD
             Anonymous Feedback - Where your identity remains a secret.
           </p>
         </section>
 
         {/* Carousel for Messages */}
-=======
-            Anonymous - Where your identity remains a secret.
-          </p>
-        </section>
-
->>>>>>> 3c95b7556bf286b92b2b2d0550ccbbe767d927d8
         <Carousel
           plugins={[Autoplay({ delay: 2000 })]}
           className="w-full max-w-lg md:max-w-xl"
@@ -72,14 +58,9 @@ export default function Home() {
         </Carousel>
       </main>
 
-<<<<<<< HEAD
       {/* Footer */}
       <footer className="text-center p-4 md:p-6 bg-gray-900 text-white">
         © 2023 Anonymous. All rights reserved.
-=======
-      <footer className="text-center p-4 md:p-6 bg-gray-900 text-white">
-        © 2023 True Feedback. All rights reserved.
->>>>>>> 3c95b7556bf286b92b2b2d0550ccbbe767d927d8
       </footer>
     </>
   );
