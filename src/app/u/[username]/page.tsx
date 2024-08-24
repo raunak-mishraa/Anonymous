@@ -97,7 +97,7 @@ export default function SendMessage() {
 
   return (
     <div className="container mx-auto my-8 p-6 bg-white rounded max-w-4xl">
-      <h1 className="text-4xl font-bold mb-6 text-center">
+      <h1 className="text-4xl font-bold mb-6 text-center text-black">
         Public Profile Link
       </h1>
       <Form {...form}>
@@ -126,7 +126,7 @@ export default function SendMessage() {
                 Please wait
               </Button>
             ) : (
-              <Button type="submit" disabled={isLoading || !messageContent}>
+              <Button className='bg-black' type="submit" disabled={isLoading || !messageContent}>
                 Send It
               </Button>
             )}
@@ -138,7 +138,7 @@ export default function SendMessage() {
         <div className="space-y-2">
           <Button
             onClick={fetchSuggestedMessages}
-            className="my-4"
+            className="my-4 bg-black"
             disabled={isSuggestLoading}
           >
             Suggest Messages
@@ -171,7 +171,7 @@ export default function SendMessage() {
       <div className="text-center">
         <div className="mb-4">Get Your Message Board</div>
         <Link href={'/sign-up'}>
-          <Button>Create Your Account</Button>
+          <Button className='bg-black'>Create Your Account</Button>
         </Link>
       </div>
     </div>

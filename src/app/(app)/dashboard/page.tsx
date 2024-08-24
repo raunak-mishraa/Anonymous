@@ -84,7 +84,6 @@ function UserDashboard() {
     [setIsLoading, setMessages, toast]
   );
 
-  // Fetch initial state from the server
   useEffect(() => {
     if (!session || !session.user) return;
 
@@ -134,7 +133,8 @@ function UserDashboard() {
   };
 
   return (
-    <div className="my-8 mx-4 md:mx-8 lg:mx-auto p-6 bg-white rounded w-full max-w-6xl">
+    <div className='bg-[#F9F9F9] text-black'>
+    <div className="my-8 mx-4 md:mx-8 lg:mx-auto p-6 rounded w-full max-w-6xl">
       <h1 className="text-4xl font-bold mb-4">User Dashboard</h1>
 
       <div className="mb-4">
@@ -146,7 +146,7 @@ function UserDashboard() {
             disabled
             className="input input-bordered w-full p-2 mr-2"
           />
-          <Button onClick={copyToClipboard}>Copy</Button>
+          <Button className='bg-black' onClick={copyToClipboard}>Copy</Button>
         </div>
       </div>
 
@@ -156,6 +156,7 @@ function UserDashboard() {
           checked={acceptMessages}
           onCheckedChange={handleSwitchChange}
           disabled={isSwitchLoading}
+          className='bg-black'
         />
         <span className="ml-2">
           Accept Messages: {acceptMessages ? 'On' : 'Off'}
@@ -190,6 +191,7 @@ function UserDashboard() {
           <p>No messages to display.</p>
         )}
       </div>
+    </div>
     </div>
   );
 }

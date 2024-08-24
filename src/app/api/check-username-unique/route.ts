@@ -14,7 +14,7 @@ export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
     const queryParams = {
       username: searchParams.get('username'),
-    };
+    };//we did this approach cause we have to parse it to zod object
 
     const result = UsernameQuerySchema.safeParse(queryParams);
     console.log('result:', result);

@@ -27,7 +27,7 @@ function SignupForm() {
 
   //zod implementation
   const form = useForm<z.infer<typeof signUpSchema>>({
-    resolver: zodResolver(signUpSchema),
+    resolver: zodResolver(signUpSchema),//THIS CONNECTS ZOD TO REACT HOOK FORM
     defaultValues: {
       username: '',
       email: '',
@@ -93,11 +93,11 @@ function SignupForm() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-800">
-    <div className="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow-md">
+    <div className="flex justify-center items-center min-h-screen bg-[#F9F9F9]">
+    <div className="text-black w-full max-w-md p-8 space-y-8 bg-white rounded-lg border">
       <div className="text-center">
-        <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl mb-6">
-          Join Anonymous
+        <h1 className="text-3xl font-extrabold tracking-tight lg:text-5xl mb-6">
+         Anonymous
         </h1>
         <p className="mb-4">Sign up to start your anonymous adventure</p>
       </div>
@@ -165,7 +165,7 @@ function SignupForm() {
               </FormItem>
             )}
           />
-          <Button type="submit" className='w-full' disabled={isSubmitting}>
+          <Button type="submit" className='bg-black w-full' disabled={isSubmitting}>
             {isSubmitting ? (
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
